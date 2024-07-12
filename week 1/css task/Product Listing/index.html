@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Product Listing</h1>
+    </header>
+    <aside>
+        <h2>Filters</h2>
+        <form id="filters">
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="home">Home</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price-range">Price Range</label>
+                <select id="price-range">
+                    <option value="all">All</option>
+                    <option value="0-50">$0 - $50</option>
+                    <option value="51-100">$51 - $100</option>
+                    <option value="101-200">$101 - $200</option>
+                </select>
+            </div>
+        </form>
+    </aside>
+    <main>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaHMBq9hE9w0Z8LINVH24IJBwRzIErAqTVVQ&s" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$50</p>
+            </div>
+            <div class="product-card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/anna-rosa-vitiello-wears-white-and-orange-sunglasses-gold-news-photo-1672741379.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$150</p>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfLxVh1JU3wWGYf-MRTQQ9S1R_6ypAB0Y9g&s" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$30</p>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </main>
+</body>
+</html>
