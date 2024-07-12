@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+
+    <h1>JavaScript Tasks</h1>
+
+    <script>
+        // Task 1: Fortune Teller
+        function tellFortune(children, partner, location, job) {
+            console.log(`You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`);
+        }
+
+        tellFortune(2, 'Alice', 'New York', 'Software Developer');
+        tellFortune(3, 'Bob', 'Los Angeles', 'Designer');
+        tellFortune(1, 'Charlie', 'London', 'Engineer');
+
+        // Task 2: Pet Age Calculator
+        function calculatePetAge(petAge, conversionRate = 7) {
+            console.log(`Your pet is ${petAge * conversionRate} years old in pet years!`);
+        }
+
+        calculatePetAge(3);
+        calculatePetAge(5, 6);
+        calculatePetAge(2, 8);
+
+        // Task 3: The Rectangler
+        function calcPerimeter(length, width) {
+            console.log(`The perimeter is ${(2 * (length + width))}.`);
+        }
+
+        function calcArea(length, width) {
+            console.log(`The area is ${(length * width)}.`);
+        }
+
+        calcPerimeter(5, 10);
+        calcArea(5, 10);
+
+        // Task 4: The Coffee Consumption Estimator
+        function calculateCoffeeSupply(age, cupsPerDay) {
+            const maxAge = 80;
+            const totalCups = Math.round(cupsPerDay * 365 * (maxAge - age));
+            console.log(`You will need ${totalCups} cups of coffee to keep you awake until the age of ${maxAge}.`);
+        }
+
+        calculateCoffeeSupply(25, 2.5);
+        calculateCoffeeSupply(30, 3);
+        calculateCoffeeSupply(40, 1.5);
+
+        // Task 5: The Distance Converter
+        function metersToFeet(meters) {
+            const feet = meters * 3.281;
+            console.log(`${meters} meters is equal to ${feet.toFixed(2)} feet.`);
+        }
+
+        function feetToMeters(feet) {
+            const meters = feet * 0.3048;
+            console.log(`${feet} feet is equal to ${meters.toFixed(2)} meters.`);
+        }
+
+        metersToFeet(100);
+        feetToMeters(328.1);
+    </script>
+
+</body>
+</html>
