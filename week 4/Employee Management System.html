@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+</head>
+<body>
+  <h1>Check the console for output</h1>
+  <script>
+    // Employee constructor function
+    function Employee(name, age, department, salary) {
+      this.name = name;
+      this.age = age;
+      this.department = department;
+      this.salary = salary;
+    }
+
+    // Example employee objects
+    const employee1 = new Employee('Alice', 30, 'HR', 50000);
+    const employee2 = new Employee('Bob', 40, 'Engineering', 60000);
+    const employee3 = new Employee('Charlie', 35, 'Marketing', 55000);
+    const employees = [employee1, employee2, employee3];
+
+    // Calculate Average Salary
+    function calculateAverageSalary(employees) {
+      const totalSalary = employees.reduce((sum, employee) => sum + employee.salary, 0);
+      return totalSalary / employees.length;
+    }
+
+    // Find Employees in a Department
+    function findEmployeesInDepartment(employees, department) {
+      return employees.filter(employee => employee.department === department);
+    }
+
+    // Increase Salary for Employees
+    function increaseSalary(employees, percentage) {
+      employees.forEach(employee => {
+        employee.salary += (employee.salary * (percentage / 100));
+      });
+    }
+
+    // Sort Employees by Age
+    function sortEmployeesByAge(employees) {
+      return employees.sort((a, b) => a.age - b.age);
+    }
+
+    // Example usage
+    console.log('Average Salary:', calculateAverageSalary(employees));
+    console.log('HR Employees:', findEmployeesInDepartment(employees, 'HR'));
+
+    increaseSalary(employees, 10);
+    console.log('Employees after salary increase:', employees);
+
+    console.log('Employees sorted by age:', sortEmployeesByAge(employees));
+  </script>
+</body>
+</html>
